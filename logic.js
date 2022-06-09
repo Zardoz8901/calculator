@@ -14,6 +14,7 @@ function divide(a, b) {
     return a / b
 };
 
+//calls one of the above functions on the numbers
 function operate(operator, a, b) {
     switch (operator) {
         case '+':

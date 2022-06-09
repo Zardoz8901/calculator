@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-flow: row;
+    margin: 0px;
+    height: 100vh;
+    background-color: #95ABEE;
+}
+
+.gutter {
+    width: 160px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #95ABEE;
+    flex: 1;
+}
+
+.column {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.calc-body {
+    background-color: #EED794;
+    width: 300px;
+    height: 450px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.screen {
+    background-color: #0f1d26;
+    color: #EE9D95;
+    font-size: xx-large;
+    font-weight: 100;
+    padding: 1vh;
+    padding-left: 60%;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}
+
+p {
+    margin: 10px;
+}
+
+.button.container {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.top {
+    margin-top: 10px;
+}
+
+.invis {
+    background-color: #EE9D95;
+    border: none;
+    color: #EED794;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px;
+    border-radius: 5px;
+    color: #1A2321;
+    background-color: #FFFFF0;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+.big {
+    width: 90px;
+}
+
+ /*color: #FFA700; Chrome Orange Button
+   color: #D3494E; Red LED
+    */
