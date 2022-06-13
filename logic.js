@@ -31,3 +31,4 @@ function operate(operator, a, b) {
             break;
     }
 }; 
+

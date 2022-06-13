@@ -36,18 +36,19 @@ body {
 
 .screen {
     background-color: #0f1d26;
-    color: #EE9D95;
+    color: #E67166;
     font-size: xx-large;
     font-weight: 100;
-    padding: 1vh;
-    padding-left: 60%;
+    padding: 14px;
+    width: 248px;
     border-radius: 5px;
     margin-top: 10px;
+    text-align: end;
     
 }
 
 p {
-    margin: 10px;
+    margin: 0px;
 }
 
 .button.container {
@@ -69,9 +70,8 @@ p {
 }
 
 .invis {
-    background-color: #EE9D95;
-    border: none;
-    color: #EED794;
+    background-color: #E7C765;
+    color: #907116;
 }
 
 button {
@@ -85,10 +85,23 @@ button {
     background-color: #FFFFF0;
     font-family: Helvetica, sans-serif;
     text-align: center;
+    border: none;
+}
+
+button:hover {
+   background-color: #FAC8C0;
+}
+
+button:active {
+    background-color: #F7F7F7;
 }
 
 .big {
     width: 90px;
+}
+
+#dot {
+    font-weight: bolder;
 }
 
  /*color: #FFA700; Chrome Orange Button
