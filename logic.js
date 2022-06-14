@@ -23,7 +23,7 @@ function operate(operator, a, b) {
         case '-':
             return subtract(a,b);
             break;
-        case '*':
+        case '×':
             return multiply(a,b);
             break;
         case '/':
@@ -31,4 +31,11 @@ function operate(operator, a, b) {
             break;
     }
 }; 
+
+document.body.addEventListener('click', event => {
+    if (event.target.nodeName == 'BUTTON') {
+        let keyPress = event.target.textContent;
+        console.log(keyPress)
+    }
+});
 
