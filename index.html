@@ -12,38 +12,39 @@
     <div class="gutter"></div>
             <div class="column">
                 <div class="calc-body">
-                    <div class="screen">
-                        <p>0</p>
+                    <div class="display">
+                        <div data-previous-operand class="previous operand"></div>
+                        <div data-current-operand class="current operand"></div> 
                     </div>
                     <div class="button container">
                         <div class="row top">
-                            <button id="clear-last">CE/D</button>
-                            <button id="divide">÷</button>
-                            <button id="multiply">×</button>
-                            <button id="git" class="invis">GIT</button>
+                            <button data-delete>CE/D</button>
+                            <button data-operator="">÷</button>
+                            <button data-operator="">*</button>
+                            <button onclick="window.open('https://github.com/Zardoz8901/calculator')" class="invis">GIT</button>
                         </div>
                         <div class="row middle-one">
-                            <button id="seven">7</button>
-                            <button id="eight">8</button>
-                            <button id="nine">9</button>
-                            <button id="global-clear">C</button>
+                            <button data-number>7</button>
+                            <button data-number>8</button>
+                            <button data-number>9</button>
+                            <button data-global-clear>C</button>
                         </div>
                         <div class="row middle-two">
-                            <button id="four">4</button>
-                            <button id="five">5</button>
-                            <button id="six">6</button>
-                            <button id="minus">-</button>
+                            <button data-number>4</button>
+                            <button data-number>5</button>
+                            <button data-number>6</button>
+                            <button data-operator>-</button>
                         </div>
                         <div class="row middle-three">
-                            <button id="one">1</button>
-                            <button id="two">2</button>
-                            <button id="three">3</button>
-                            <button id="plus">+</button>
+                            <button data-number>1</button>
+                            <button data-number>2</button>
+                            <button data-number>3</button>
+                            <button data-operator>+</button>
                         </div>
                         <div class="row bottom">
-                            <button id="zero" class="big">0</button>
-                            <button id="dot">.</button>
-                            <button id="equals" class="big">=</button>
+                            <button data-number class="big">0</button>
+                            <button data-number>.</button>
+                            <button data-equals class="big">=</button>
                         </div>
                     </div>
                 </div>

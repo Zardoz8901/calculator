@@ -26,7 +26,7 @@ body {
 .calc-body {
     background-color: #EED794;
     width: 300px;
-    height: 450px;
+    height: 500px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -34,21 +34,24 @@ body {
     border-radius: 5px;
 }
 
-.screen {
+.display {
     background-color: #0f1d26;
     color: #EE492F;
     font-size: xx-large;
     font-weight: 100;
     padding: 14px;
     width: 248px;
+    height: 56px;
     border-radius: 5px;
     margin-top: 10px;
     text-align: end;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-p {
-    margin: 0px;
+.previous.operand {
+    font-size: medium;
 }
 
 .button.container {
@@ -104,6 +107,4 @@ button:active {
     font-weight: bolder;
 }
 
- /*color: #FFA700; Chrome Orange Button
-   color: #D3494E; Red LED
-    */
+ 
