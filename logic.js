@@ -1,22 +1,30 @@
+// create calculator template
 class Calculator {
+    
+    // establish operand text parameters and call function clear
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement
         this.currentOperandTextElement = currentOperandTextElement
         this.clear()
     }
-    
+
+    // assign currentOperand and previousOperand
+    // set display text to empty strings and operation to undefined
     clear() {
         this.currentOperand = ''
         this.previousOperand = ''
         this.operation = undefined
     }
-
+    
+    // remove number at the end of string 
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
     }
 
+    // calls the number button inner text as function argument
     appendNumber(number) {
+        this.currentOperand = this.currentOperand.toString()
         if (number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
@@ -87,6 +95,7 @@ class Calculator {
     }
 }
 
+// return data-tag elements and assign them to global scope
 const numberButtons = document.querySelectorAll('[data-number]')
 const operatorButtons = document.querySelectorAll('[data-operator]')
 const equalsButton = document.querySelector('[data-equals]')
@@ -95,8 +104,12 @@ const clearButton = document.querySelector('[data-global-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
+// create caluclator object from calculator class
+// feed operand text elements (top and bottom display) into the parameters 
 const calculator = new Calculator(previousOperandTextElement,currentOperandTextElement)
 
+// hook event listeners to global scoped elements
+// on click initiate calculator object functions
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText)
