@@ -11,7 +11,7 @@ body {
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: #95ABEE;
+    background-color: #95abee;
     flex: 1;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .display {
-    background-color: #0f1d26;
+    background-color: #081230;
     color: #EE492F;
     font-size: xx-large;
     font-weight: 100;
@@ -89,6 +89,7 @@ button {
     font-family: Helvetica, sans-serif;
     text-align: center;
     border: none;
+    
 }
 
 button:hover {
