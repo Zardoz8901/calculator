@@ -95,12 +95,13 @@ class Calculator {
         // convert current operand to string
         const stringNumber = number.toString()
         const length = stringNumber.length
+        // set character limit on display output
         if (length > 13) {
            return parseFloat(stringNumber).toPrecision(10)
         }
-        // break off all numbers preceding the decimal
+        // split off all numbers preceding the decimal
         const integerDigits = parseFloat(stringNumber.split('.')[0])
-        // break off all numbers following the decimal
+        // split off all numbers following the decimal
         const decimalDigits = stringNumber.split('.')[1]
         let integerDisplay
         // if integer digits are not a number return empty string
