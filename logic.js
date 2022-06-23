@@ -24,12 +24,18 @@ class Calculator {
 
     // call the number button inner text as function argument
     appendNumber(number) {
+        // limit input length so number doesnt overflow
+        const length = this.currentOperand.length
+        if (length > 12) {
+            return ''
+        } else {
         // number converted to string
         this.currentOperand = this.currentOperand.toString()
         // limit input to a single decimal
         if (number === '.' && this.currentOperand.includes('.')) return
         // add the inputted number to current operand
         this.currentOperand = this.currentOperand.toString() + number.toString()
+        }
     }
 
     // call the operation button inner text as function arguement
@@ -88,6 +94,10 @@ class Calculator {
     getDisplayNumber(number) {
         // convert current operand to string
         const stringNumber = number.toString()
+        const length = stringNumber.length
+        if (length > 13) {
+           return parseFloat(stringNumber).toPrecision(10)
+        }
         // break off all numbers preceding the decimal
         const integerDigits = parseFloat(stringNumber.split('.')[0])
         // break off all numbers following the decimal
@@ -117,7 +127,8 @@ class Calculator {
         // after variable is passed through the display number cleaner function
         this.currentOperandTextElement.innerText = 
         this.getDisplayNumber(this.currentOperand)
-        // if there is an operator called
+        
+            // if there is an operator called
         if (this.operation != null) {
             // set previous operand inner text is set to previous operand variabled
             // the variable is passed throught the display number cleaner function
