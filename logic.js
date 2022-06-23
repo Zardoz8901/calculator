@@ -40,6 +40,9 @@ class Calculator {
 
     // call the operation button inner text as function arguement
     chooseOperation(operation) {
+        if (operation == '/') {
+            operation = '÷'
+        }
         // if current operand is empty, stop
         if (this.currentOperand === '') return
         // if previous operand is not empty call compute function
@@ -136,6 +139,11 @@ class Calculator {
             // the operation symbol is catenated at the end
             this.previousOperandTextElement.innerText =
             `${this.getDisplayNumber(this.previousOperand)} ${this.operation }`
+                // clear operating on an empty decimal
+                if (this.previousOperandTextElement.innerText == `. ${this.operation}`) {
+                    this.previousOperandTextElement.innerText = ''
+                    this.clear()
+                }
         // if operation is null the previous operand text is cleared
         } else {
             this.previousOperandTextElement.innerText = ''
@@ -186,3 +194,38 @@ deleteButton.addEventListener('click', button => {
     calculator.delete()
     calculator.updateDisplay() 
 })
+
+document.addEventListener('keydown', function(number) {
+    if  (number.key >= 0 && number.key <= 9 || number.key == '.') {
+        calculator.appendNumber(number.key)
+        calculator.updateDisplay()
+    }
+});
+
+document.addEventListener('keydown', function(operator) {
+    if (operator.key == '+' || operator.key == '-' || operator.key == '/' || operator.key == '*') {
+        calculator.chooseOperation(operator.key)
+        calculator.updateDisplay()
+    }
+})
+
+document.addEventListener('keydown', function(equals) {
+    if (equals.key == 'Enter' || equals.key == '=') {
+        calculator.compute(equals.key)
+        calculator.updateDisplay()
+    }
+})
+
+document.addEventListener('keydown', function(clear) {
+    if (clear.key == 'Delete' || clear.key == 'Escape') {
+        calculator.clear(clear.key)
+        calculator.updateDisplay()
+    }
+})
+
+document.addEventListener('keydown', function(backspace) {
+    if (backspace.key == 'Backspace') {
+        calculator.delete(backspace.key)
+        calculator.updateDisplay()
+    }
+})    
