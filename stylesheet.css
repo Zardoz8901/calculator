@@ -98,6 +98,7 @@ button:hover {
 
 button:active {
     background-color: #F7F7F7;
+    transform: scale(1.1);
 }
 
 .big {

@@ -228,4 +228,4 @@ document.addEventListener('keydown', function(backspace) {
         calculator.delete(backspace.key)
         calculator.updateDisplay()
     }
-})    
+})
