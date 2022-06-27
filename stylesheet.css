@@ -118,7 +118,7 @@ button:active {
 
 .equals-transition {
     transition: .01s;
-    background: #C2D6FA;
+    background-color: #EEF8A4;
     transform: scale(1.1);
 }
 
@@ -130,7 +130,7 @@ button:active {
 
 .decimal-transition {
     transition: .01s;
-    background: #DEDEDE;
+    background: #C2D6FA;;
     transform: scale(1.1);
 }
 

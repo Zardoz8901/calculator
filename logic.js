@@ -222,7 +222,7 @@ document.addEventListener('keydown', function(e) {
 
 document.addEventListener('keydown', function(e) {
     if (e.key == 'Delete' || e.key == 'Escape') {
-        let clearPress = document.querySelector(`button[data-clear="global"]`);
+        let clearPress = document.querySelector('button[data-clear="global"]');
         clearPress.classList.add('clear-transition');
         calculator.clear(e.key);
         calculator.updateDisplay();
@@ -231,7 +231,7 @@ document.addEventListener('keydown', function(e) {
 
 document.addEventListener('keydown', function(e) {
     if (e.key == 'Backspace') {
-        let deletePress = document.querySelector(`button[data-clear="delete"]`);
+        let deletePress = document.querySelector('button[data-clear="delete"]');
         deletePress.classList.add('clear-transition');
         calculator.delete(e.key);
         calculator.updateDisplay();
@@ -243,7 +243,7 @@ document.addEventListener('keydown', e => {
         let numPress = document.querySelector(`button[data-number="${e.key}"]`);
         numPress.classList.add('number-transition');
        } else if (e.key == ".") {
-        let decimalPress = document.querySelector(`button[data-number="."]`);
+        let decimalPress = document.querySelector('button[data-number="."]');
         decimalPress.classList.add('decimal-transition');
        }
 });
@@ -255,7 +255,11 @@ document.addEventListener('keydown', e => {
 });
 
 
+//clear class on transition end
+//clears the classes stuck on interrupted transition
 buttons.forEach(button => button.addEventListener('transitionend', removeTransition));
+buttons.forEach(button => button.addEventListener('transitioncancel', removeTransition));
+
 function removeTransition(e) {
     this.classList.remove('number-transition');
     this.classList.remove('operator-transition');
