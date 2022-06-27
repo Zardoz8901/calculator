@@ -89,6 +89,7 @@ button {
     font-family: Helvetica, sans-serif;
     text-align: center;
     border: none;
+    transition: .35s;
     
 }
 
@@ -97,9 +98,42 @@ button:hover {
 }
 
 button:active {
+    transition: .01s;
     background-color: #F7F7F7;
     transform: scale(1.1);
 }
+
+.number-transition {
+    transition: .01s;
+    background: #C2FAC9;
+    transform: scale(1.1);
+}
+
+
+.operator-transition {
+    transition: .01s;
+    background: #FAC2F3;
+    transform: scale(1.1);
+}
+
+.equals-transition {
+    transition: .01s;
+    background: #C2D6FA;
+    transform: scale(1.1);
+}
+
+.clear-transition {
+    transition: .01s;
+    background: #FAC8C0;
+    transform: scale(1.1);
+}
+
+.decimal-transition {
+    transition: .01s;
+    background: #DEDEDE;
+    transform: scale(1.1);
+}
+
 
 .big {
     width: 90px;
